@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yuanzhen Cai — Senior UX Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles-pro.css">
+</head>
+<body>
+
+<!-- Grain texture overlay -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- Custom cursor -->
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="cursor-dot"  id="cursorDot"></div>
+
+<!-- Scroll progress bar -->
+<div class="scroll-bar" id="scrollBar"></div>
+
+<!-- ── NAVIGATION ─────────────────────────────────────────── -->
+<header class="header" id="header">
+  <nav class="nav">
+    <a class="nav-logo" href="#hero">YC</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about"      class="nl">About</a></li>
+      <li><a href="#projects"   class="nl">Work</a></li>
+      <li><a href="#leadership" class="nl">Leadership</a></li>
+      <li><a href="#personal"   class="nl">Personal</a></li>
+      <li><a href="#cv"         class="nl">CV</a></li>
+    </ul>
+    <button class="nav-mob-btn" id="navMobBtn" aria-label="Toggle menu">
+      <span></span><span></span>
+    </button>
+  </nav>
+  <div class="mob-menu" id="mobMenu">
+    <ul>
+      <li><a href="#about"      class="mob-link">About</a></li>
+      <li><a href="#projects"   class="mob-link">Work</a></li>
+      <li><a href="#leadership" class="mob-link">Leadership</a></li>
+      <li><a href="#personal"   class="mob-link">Personal</a></li>
+      <li><a href="#cv"         class="mob-link">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+<!-- ── HERO ──────────────────────────────────────────────── -->
+<section id="hero" class="hero">
+  <div class="hero-bg-glow" aria-hidden="true"></div>
+  <div class="hero-inner container">
+    <div class="hero-eyebrow">
+      <span class="eyebrow-rule"></span>
+      <span>Senior UX Designer &nbsp;·&nbsp; Stavanger, Norway</span>
+    </div>
+    <h1 class="hero-heading">
+      <span class="hero-line reveal-chars">Yuanzhen</span>
+      <em class="hero-line reveal-chars">Cai</em>
+    </h1>
+    <div class="hero-foot">
+      <p class="hero-tagline">5+ years designing for healthcare &amp; simulation at Laerdal Medical.<br>Leading a team. Growing toward Lead Design.</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-gold magnetic">View Work</a>
+        <a href="#cv"       class="btn btn-ghost magnetic">Curriculum Vitae</a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="hs-item">
+        <span class="hs-num"><span class="count-up" data-target="500">0</span>K+</span>
+        <span class="hs-label">Users impacted</span>
+      </div>
+      <div class="hs-sep" aria-hidden="true"></div>
+      <div class="hs-item">
+        <span class="hs-num"><span class="count-up" data-target="5">0</span>+</span>
+        <span class="hs-label">Years experience</span>
+      </div>
+      <div class="hs-sep" aria-hidden="true"></div>
+      <div class="hs-item">
+        <span class="hs-num"><span class="count-up" data-target="3">0</span></span>
+        <span class="hs-label">Designers led</span>
+      </div>
+      <div class="hs-sep" aria-hidden="true"></div>
+      <div class="hs-item">
+        <span class="hs-num"><span class="count-up" data-target="5">0</span></span>
+        <span class="hs-label">Countries deployed</span>
+      </div>
+    </div>
+  </div>
+  <!-- Scrolling ticker -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>Senior UX Designer</span><span class="td">·</span>
+      <span>Healthcare UX</span><span class="td">·</span>
+      <span>Laerdal Medical</span><span class="td">·</span>
+      <span>Design Leadership</span><span class="td">·</span>
+      <span>Norway</span><span class="td">·</span>
+      <span>CPR Training</span><span class="td">·</span>
+      <span>ESTJ</span><span class="td">·</span>
+      <span>500K+ Users</span><span class="td">·</span>
+      <span>MBA Imperial College</span><span class="td">·</span>
+      <span>AI-native Workflows</span><span class="td">·</span>
+      <!-- duplicate for seamless loop -->
+      <span>Senior UX Designer</span><span class="td">·</span>
+      <span>Healthcare UX</span><span class="td">·</span>
+      <span>Laerdal Medical</span><span class="td">·</span>
+      <span>Design Leadership</span><span class="td">·</span>
+      <span>Norway</span><span class="td">·</span>
+      <span>CPR Training</span><span class="td">·</span>
+      <span>ESTJ</span><span class="td">·</span>
+      <span>500K+ Users</span><span class="td">·</span>
+      <span>MBA Imperial College</span><span class="td">·</span>
+      <span>AI-native Workflows</span><span class="td">·</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── ABOUT ──────────────────────────────────────────────── -->
+<section id="about" class="about section-pad">
+  <div class="container">
+    <div class="about-grid">
+
+      <div class="about-left">
+        <p class="sec-label">About</p>
+        <h2 class="sec-heading reveal-up">The Designer</h2>
+        <div class="about-bio reveal-up">
+          <p>Chinese, based in Norway. Senior UX Designer with 5+ years of experience in resuscitation training and healthcare simulation products at Laerdal Medical. Currently leading a team of 3 designers to deliver high-impact digital products, collaborating closely with product, engineering, and stakeholders.</p>
+          <p>Skilled at extending the impact of user experience beyond individual projects by enabling teams, mentoring designers, fostering design communities, and aligning design outcomes with business and strategic objectives. Increasingly working in AI-native ways to accelerate design processes and improve quality.</p>
+          <p>Seeking to grow into a Lead Design role to further strengthen team capabilities, ways of working, and overall design impact.</p>
+        </div>
+        <div class="skill-tags reveal-up">
+          <span>UX Research</span><span>Interaction Design</span><span>Design Systems</span>
+          <span>Figma</span><span>User Testing</span><span>Stakeholder Management</span>
+          <span>Team Leadership</span><span>Service Design</span><span>AI-native Workflows</span>
+          <span>Data-driven Design</span><span>Miro</span><span>Prototyping</span>
+        </div>
+      </div>
+
+      <div class="about-right reveal-up">
+        <div class="about-meta-card">
+          <div class="amc-row"><span class="amc-label">Location</span><span class="amc-val">Stavanger, Norway</span></div>
+          <div class="amc-row"><span class="amc-label">Company</span><span class="amc-val">Laerdal Medical</span></div>
+          <div class="amc-row"><span class="amc-label">Role</span><span class="amc-val">Senior UX Designer</span></div>
+          <div class="amc-row"><span class="amc-label">Team</span><span class="amc-val">3 designers</span></div>
+          <div class="amc-row"><span class="amc-label">MBTI</span><span class="amc-val gold">ESTJ</span></div>
+          <div class="amc-row"><span class="amc-label">Hobby</span><span class="amc-val">Traveling</span></div>
+        </div>
+        <div class="aspiration-block">
+          <span class="asp-eyebrow">Aspiration</span>
+          <p>Growing into a Lead Design role to further strengthen team capabilities, ways of working, and overall design impact.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ── PROJECTS ───────────────────────────────────────────── -->
+<section id="projects" class="projects">
+  <div class="projects-top container">
+    <p class="sec-label">Selected Work</p>
+    <h2 class="sec-heading reveal-up">Case Studies</h2>
+  </div>
+
+  <!-- ── 01 RevivR ── -->
+  <article class="proj" data-proj="1">
+    <div class="proj-visual parallax-section">
+      <img src="Portfolio%20image/RevivR-1.png" alt="RevivR CPR Training Ecosystem"
+           class="proj-hero-img parallax-img lightbox-trigger"
+           data-group="revivr" data-caption="RevivR — Overview" loading="lazy">
+      <div class="proj-visual-overlay"></div>
+      <div class="proj-visual-meta">
+        <span class="pvm-num">01</span>
+        <span class="pvm-title">RevivR CPR Training Ecosystem</span>
+      </div>
+    </div>
+
+    <div class="proj-body container">
+      <div class="proj-head">
+        <div class="proj-head-left">
+          <h3 class="proj-title">RevivR CPR Training Ecosystem</h3>
+          <div class="proj-tags">
+            <span>Lead UX Designer</span>
+            <span>3 Years</span>
+            <span>Global Product</span>
+            <span>End-to-End</span>
+          </div>
+        </div>
+        <div class="proj-kpi">
+          <div class="kpi-item"><span class="kpi-n">500K+</span><span class="kpi-l">Users</span></div>
+          <div class="kpi-item"><span class="kpi-n">5</span><span class="kpi-l">Countries</span></div>
+          <div class="kpi-item"><span class="kpi-n">3</span><span class="kpi-l">Partners</span></div>
+        </div>
+      </div>
+
+      <div class="proj-content">
+        <div class="proj-desc">
+          <p>Led end-to-end experience design for the RevivR CPR training ecosystem — a global digital product deployed across five countries, impacting over 500,000 users. Translated complex medical training requirements into accessible, engaging, and behaviour-driven user experiences.</p>
+          <p>Collaborated with the British Heart Foundation (BHF), American Heart Association (AHA), and Swedish Resuscitation Council to launch localised versions across markets. The product spans solo, group, and classroom training formats, each with distinct interaction and content requirements.</p>
+        </div>
+        <div class="proj-points">
+          <div class="pp"><span class="pp-rule"></span><span>3 years as Lead UX on a flagship global product</span></div>
+          <div class="pp"><span class="pp-rule"></span><span>Extensive user testing &amp; iterative research cycles</span></div>
+          <div class="pp"><span class="pp-rule"></span><span>Data-driven decisions &amp; stakeholder management across BHF, AHA &amp; Swedish RC</span></div>
+          <div class="pp"><span class="pp-rule"></span><span>Solo, Group, and Classroom product variants</span></div>
+        </div>
+      </div>
+
+      <div class="proj-gallery proj-gallery-3">
+        <div class="pg-wrap lightbox-trigger" data-group="revivr" data-caption="RevivR — User Flow">
+          <img src="Portfolio%20image/RevivR-1.png" alt="RevivR User Flow" loading="lazy" class="pg-img">
+          <span class="pg-cap">User Flow</span>
+        </div>
+        <div class="pg-wrap lightbox-trigger" data-group="revivr" data-caption="RevivR — Interface Design">
+          <img src="Portfolio%20image/RevivR-2.png" alt="RevivR Interface" loading="lazy" class="pg-img">
+          <span class="pg-cap">Interface Design</span>
+        </div>
+        <div class="pg-wrap lightbox-trigger" data-group="revivr" data-caption="RevivR — Research &amp; Testing">
+          <img src="Portfolio%20image/RevivR-3.png" alt="RevivR Research" loading="lazy" class="pg-img">
+          <span class="pg-cap">Research &amp; Testing</span>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 02 Heartsaver ── -->
+  <article class="proj proj-alt" data-proj="2">
+    <div class="proj-visual parallax-section">
+      <img src="Portfolio%20image/Heartsaver-1.png" alt="Heartsaver Direct"
+           class="proj-hero-img parallax-img lightbox-trigger"
+           data-group="heartsaver" data-caption="Heartsaver Direct — Overview" loading="lazy">
+      <div class="proj-visual-overlay"></div>
+      <div class="proj-visual-meta">
+        <span class="pvm-num">02</span>
+        <span class="pvm-title">Heartsaver Direct</span>
+      </div>
+    </div>
+
+    <div class="proj-body container">
+      <div class="proj-head">
+        <div class="proj-head-left">
+          <h3 class="proj-title">Heartsaver Direct</h3>
+          <div class="proj-tags">
+            <span>UX Designer</span>
+            <span>1 Year</span>
+            <span>User Testing</span>
+            <span>Product Improvement</span>
+          </div>
+        </div>
+        <div class="proj-kpi">
+          <div class="kpi-item"><span class="kpi-n">↓</span><span class="kpi-l">Risk</span></div>
+          <div class="kpi-item"><span class="kpi-n">↑</span><span class="kpi-l">Satisfaction</span></div>
+          <div class="kpi-item"><span class="kpi-n">1yr</span><span class="kpi-l">Project</span></div>
+        </div>
+      </div>
+
+      <div class="proj-content">
+        <div class="proj-desc">
+          <p>Focused on user testing and systematic product improvement over a one-year engagement. Managed risk mitigation in customer onboarding and troubleshooting within the customer discovery programme, consistently increasing customer satisfaction.</p>
+          <p>Redesigned the onboarding experience and customer support flows to reduce friction at critical decision points — directly addressing the most common drop-off and error scenarios identified through research.</p>
+        </div>
+        <div class="proj-points">
+          <div class="pp"><span class="pp-rule"></span><span>Continuous user testing &amp; iterative improvement cycles</span></div>
+          <div class="pp"><span class="pp-rule"></span><span>Risk reduction in customer onboarding &amp; support</span></div>
+          <div class="pp"><span class="pp-rule"></span><span>Measurable increase in customer satisfaction</span></div>
+        </div>
+      </div>
+
+      <div class="proj-gallery proj-gallery-2">
+        <div class="pg-wrap pg-wide lightbox-trigger" data-group="heartsaver" data-caption="Heartsaver — Onboarding Flow">
+          <img src="Portfolio%20image/Heartsaver-1.png" alt="Heartsaver Onboarding" loading="lazy" class="pg-img">
+          <span class="pg-cap">Onboarding Flow</span>
+        </div>
+        <div class="pg-wrap lightbox-trigger" data-group="heartsaver" data-caption="Heartsaver — Support UX">
+          <img src="Portfolio%20image/Heartsaver-2.png" alt="Heartsaver Support" loading="lazy" class="pg-img">
+          <span class="pg-cap">Support UX Redesign</span>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 03 SimGo ── -->
+  <article class="proj" data-proj="3">
+    <div class="proj-visual parallax-section">
+      <img src="Portfolio%20image/SimGo-1.jpg" alt="SimGo Mobile Simulator Controller"
+           class="proj-hero-img parallax-img lightbox-trigger"
+           data-group="simgo" data-caption="SimGo — Mobile Controller" loading="lazy">
+      <div class="proj-visual-overlay"></div>
+      <div class="proj-visual-meta">
+        <span class="pvm-num">03</span>
+        <span class="pvm-title">SimGo Mobile Simulator Controller</span>
+      </div>
+    </div>
+
+    <div class="proj-body container">
+      <div class="proj-head">
+        <div class="proj-head-left">
+          <h3 class="proj-title">SimGo Mobile Simulator Controller</h3>
+          <div class="proj-tags">
+            <span>Design Lead</span>
+            <span>~1 Year</span>
+            <span>Mobile App</span>
+            <span>Design System</span>
+          </div>
+        </div>
+        <div class="proj-kpi">
+          <div class="kpi-item"><span class="kpi-n">IMSH</span><span class="kpi-l">Launch</span></div>
+          <div class="kpi-item"><span class="kpi-n">✓</span><span class="kpi-l">Design System</span></div>
+          <div class="kpi-item"><span class="kpi-n">6mo</span><span class="kpi-l">Lead role</span></div>
+        </div>
+      </div>
+
+      <div class="proj-content">
+        <div class="proj-desc">
+          <p>A mobile simulator controller for clinical simulation. Served as Design Lead for six months, steering the team through two critical delivery milestones — the IMSH conference launch and the June product release — ensuring high-quality design delivery under tight timelines.</p>
+          <p>Introduced a clearer design vision through visual storytelling to align stakeholders and secure strong buy-in. Built a comprehensive design system from scratch to ensure consistency and long-term scalability.</p>
+        </div>
+        <div class="proj-points">
+          <div class="pp"><span class="pp-rule"></span><span>Design vision through visual storytelling for stakeholder alignment</span></div>
+          <div class="pp"><span class="pp-rule"></span><span>Built design system from scratch</span></div>
+          <div class="pp"><span class="pp-rule"></span><span>Delivered 2 major milestones under tight timelines</span></div>
+          <div class="pp"><span class="pp-rule"></span><span>Strong cross-team buy-in secured</span></div>
+        </div>
+      </div>
+
+      <div class="proj-gallery proj-gallery-3">
+        <div class="pg-wrap lightbox-trigger" data-group="simgo" data-caption="SimGo — Interface Design">
+          <img src="Portfolio%20image/SimGo-1.jpg" alt="SimGo Interface" loading="lazy" class="pg-img">
+          <span class="pg-cap">Interface Design</span>
+        </div>
+        <div class="pg-wrap lightbox-trigger" data-group="simgo" data-caption="SimGo — Design System">
+          <img src="Portfolio%20image/SimGo-2.png" alt="SimGo Design System" loading="lazy" class="pg-img">
+          <span class="pg-cap">Design System</span>
+        </div>
+        <div class="pg-wrap lightbox-trigger" data-group="simgo" data-caption="SimGo — Vision &amp; Storytelling">
+          <img src="Portfolio%20image/SimGo-3.png" alt="SimGo Vision" loading="lazy" class="pg-img">
+          <span class="pg-cap">Vision Storytelling</span>
+        </div>
+      </div>
+    </div>
+  </article>
+
+</section><!-- /projects -->
+
+
+<!-- ── LEADERSHIP ────────────────────────────────────────── -->
+<section id="leadership" class="leadership section-pad">
+  <div class="container">
+    <p class="sec-label">Growth</p>
+    <h2 class="sec-heading reveal-up">Leadership &amp; Impact</h2>
+
+    <div class="ld-grid">
+
+      <!-- MBA -->
+      <div class="ld-card reveal-up">
+        <div class="ld-num">01</div>
+        <div class="ld-inner">
+          <span class="ld-year">2025 — 2026</span>
+          <h3 class="ld-title">MBA · Imperial College London</h3>
+          <p class="ld-desc">Deepening strategic and leadership capabilities at one of the world's leading business schools, with a focus on aligning design impact with broader business objectives.</p>
+          <div class="ld-modules">
+            <span>Strategy</span><span>Leadership</span><span>Organisational Behaviour</span>
+            <span>Entrepreneurship</span><span>Sales Psychology</span><span>Corporate Finance</span>
+            <span>Financial Accounting</span><span>Managerial Economics</span><span>Marketing Management</span>
+          </div>
+          <div class="ld-callout">
+            <span class="ldc-rule"></span>
+            <span>Kenya field experience — "How Business Addresses Inequality"</span>
+          </div>
+          <div class="ld-imgs">
+            <div class="ld-img-wrap lightbox-trigger" data-group="mba" data-caption="MBA — Imperial College London">
+              <img src="Portfolio%20image/MBA-1.png" alt="MBA Imperial" loading="lazy">
+            </div>
+            <div class="ld-img-wrap lightbox-trigger" data-group="mba" data-caption="MBA — Kenya Field Experience">
+              <img src="Portfolio%20image/MBA-2.png" alt="Kenya" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- UX Community -->
+      <div class="ld-card reveal-up">
+        <div class="ld-num">02</div>
+        <div class="ld-inner">
+          <span class="ld-year">Ongoing</span>
+          <h3 class="ld-title">Building the UX Community</h3>
+          <p class="ld-desc">Creating the infrastructure for a thriving UX practice at Laerdal — frameworks, culture, and resources that empower designers to grow and deliver their best work.</p>
+          <div class="ld-modules">
+            <span>Competence Framework</span><span>Development Framework</span>
+            <span>Culture Workshop</span><span>Culture Website</span>
+          </div>
+          <div class="ld-imgs">
+            <div class="ld-img-wrap lightbox-trigger" data-group="ux-community" data-caption="UX Community Building">
+              <img src="Portfolio%20image/UX-1.png" alt="UX Community" loading="lazy">
+            </div>
+            <div class="ld-img-wrap lightbox-trigger" data-group="ux-community" data-caption="UX Frameworks &amp; Culture">
+              <img src="Portfolio%20image/UX-2.png" alt="UX Frameworks" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mentorship -->
+      <div class="ld-card reveal-up">
+        <div class="ld-num">03</div>
+        <div class="ld-inner">
+          <span class="ld-year">Ongoing</span>
+          <h3 class="ld-title">Mentorship &amp; Teaching</h3>
+          <p class="ld-desc">Investing in the next generation of designers through hands-on mentorship, academic collaboration, and knowledge sharing through lectures and workshops.</p>
+          <div class="ld-modules">
+            <span>Intern Mentoring</span><span>Student Thesis Support</span><span>Guest Lectures</span>
+          </div>
+          <div class="ld-imgs">
+            <div class="ld-img-wrap lightbox-trigger" data-group="mentor" data-caption="Mentorship Sessions">
+              <img src="Portfolio%20image/Mentor-1.jpg" alt="Mentorship" loading="lazy">
+            </div>
+            <div class="ld-img-wrap lightbox-trigger" data-group="mentor" data-caption="Guest Lectures">
+              <img src="Portfolio%20image/Mentor-2.png" alt="Teaching" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ── PERSONAL ──────────────────────────────────────────── -->
+<section id="personal" class="personal section-pad">
+  <div class="container personal-intro-wrap">
+    <p class="sec-label">Life Beyond Design</p>
+    <h2 class="sec-heading reveal-up">Personal</h2>
+    <p class="personal-intro reveal-up">Mandarin Chinese teacher. Passionate traveller. The curiosity I bring to the world outside work shapes the empathy and perspective behind every design decision.</p>
+  </div>
+
+  <div class="personal-gallery">
+    <div class="gal-cell gal-lg lightbox-trigger" data-group="personal" data-caption="Chinese Teacher">
+      <img src="Portfolio%20image/Teacher.png" alt="Chinese Teacher" loading="lazy">
+      <div class="gal-cap">Chinese Teacher</div>
+    </div>
+    <div class="gal-cell lightbox-trigger" data-group="personal" data-caption="Travels">
+      <img src="Portfolio%20image/Personal-1.jpg" alt="Travels" loading="lazy">
+      <div class="gal-cap">Travels</div>
+    </div>
+    <div class="gal-cell lightbox-trigger" data-group="personal" data-caption="Kenya — MBA Fieldwork">
+      <img src="Portfolio%20image/Personal-2.jpg" alt="Kenya" loading="lazy">
+      <div class="gal-cap">Kenya, MBA Fieldwork</div>
+    </div>
+    <div class="gal-cell lightbox-trigger" data-group="personal" data-caption="Norway Life">
+      <img src="Portfolio%20image/Personal-3.jpg" alt="Norway" loading="lazy">
+      <div class="gal-cap">Norway Life</div>
+    </div>
+    <div class="gal-cell gal-wide lightbox-trigger" data-group="personal" data-caption="Adventures">
+      <img src="Portfolio%20image/Personal-4.jpg" alt="Adventures" loading="lazy">
+      <div class="gal-cap">Adventures</div>
+    </div>
+    <div class="gal-cell lightbox-trigger" data-group="personal" data-caption="Food &amp; Culture">
+      <img src="Portfolio%20image/Personal-5.jpg" alt="Culture" loading="lazy">
+      <div class="gal-cap">Food &amp; Culture</div>
+    </div>
+    <div class="gal-cell lightbox-trigger" data-group="personal" data-caption="Moments">
+      <img src="Portfolio%20image/Personal-6.jpg" alt="Moments" loading="lazy">
+      <div class="gal-cap">Moments</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── CV ────────────────────────────────────────────────── -->
+<section id="cv" class="cv-sec section-pad">
+  <div class="container">
+    <p class="sec-label">Resume</p>
+    <h2 class="sec-heading reveal-up">Curriculum Vitae</h2>
+
+    <div class="cv-card reveal-up">
+      <div class="cv-header">
+        <div class="cv-header-left">
+          <h3 class="cv-name">Yuanzhen Cai</h3>
+          <p class="cv-tagline">Senior UX Designer · Healthcare &amp; Simulation</p>
+        </div>
+        <div class="cv-header-right">
+          <span class="cv-loc">Stavanger, Norway</span>
+        </div>
+      </div>
+
+      <div class="cv-rule"></div>
+
+      <div class="cv-body">
+        <!-- Left: Experience + Skills -->
+        <div class="cv-col">
+          <h4 class="cv-col-label">Experience</h4>
+          <div class="cv-entry">
+            <span class="cv-date">2021 — Present</span>
+            <div class="cv-entry-body">
+              <div class="cv-role">Senior UX Designer</div>
+              <div class="cv-place">Laerdal Medical · Stavanger, Norway</div>
+              <ul class="cv-bullets">
+                <li>Leading a team of 3 designers across high-impact digital health products</li>
+                <li>End-to-end UX for global CPR training, mobile simulation, and clinical apps</li>
+                <li>Collaborating with international partners: BHF, AHA, Swedish RC</li>
+                <li>Building design frameworks and enabling the UX community</li>
+                <li>Increasingly working in AI-native ways to accelerate design quality</li>
+              </ul>
+            </div>
+          </div>
+
+          <h4 class="cv-col-label">Skills &amp; Tools</h4>
+          <div class="cv-skill-grid">
+            <span>UX Research</span><span>Interaction Design</span><span>Design Systems</span>
+            <span>Figma</span><span>User Testing</span><span>Prototyping</span>
+            <span>Stakeholder Management</span><span>Team Leadership</span><span>Service Design</span>
+            <span>AI-native Workflows</span><span>Data Analysis</span><span>Miro</span>
+          </div>
+
+          <h4 class="cv-col-label">Languages</h4>
+          <div class="cv-langs">
+            <div class="cv-lang"><span>Mandarin Chinese</span><span class="cv-lang-lv">Native</span></div>
+            <div class="cv-lang"><span>English</span><span class="cv-lang-lv">Fluent</span></div>
+            <div class="cv-lang"><span>Norwegian</span><span class="cv-lang-lv">Learning</span></div>
+          </div>
+        </div>
+
+        <!-- Right: Education + Highlights -->
+        <div class="cv-col cv-col-r">
+          <h4 class="cv-col-label">Education</h4>
+          <div class="cv-entry">
+            <span class="cv-date">2025 — 2026</span>
+            <div class="cv-entry-body">
+              <div class="cv-role">MBA</div>
+              <div class="cv-place">Imperial College London · UK</div>
+              <p class="cv-note">Strategy, Leadership, Entrepreneurship, Finance, Marketing. Kenya field experience.</p>
+            </div>
+          </div>
+          <div class="cv-entry">
+            <span class="cv-date">2018 — 2020</span>
+            <div class="cv-entry-body">
+              <div class="cv-role">MSc, Product Service System Design</div>
+              <div class="cv-place">Politecnico di Milano · Italy</div>
+            </div>
+          </div>
+          <div class="cv-entry">
+            <span class="cv-date">2014 — 2018</span>
+            <div class="cv-entry-body">
+              <div class="cv-role">BEng, Industrial Design</div>
+              <div class="cv-place">Hefei University of Technology · China</div>
+            </div>
+          </div>
+
+          <h4 class="cv-col-label">Key Highlights</h4>
+          <div class="cv-highlights">
+            <div class="cv-hl"><span class="cvhl-rule"></span><div><strong>500K+ users</strong> impacted across 5 countries</div></div>
+            <div class="cv-hl"><span class="cvhl-rule"></span><div>Leading a <strong>team of 3 designers</strong></div></div>
+            <div class="cv-hl"><span class="cvhl-rule"></span><div>MBA at <strong>Imperial College London</strong></div></div>
+            <div class="cv-hl"><span class="cvhl-rule"></span><div><strong>5+ years</strong> in healthcare UX &amp; simulation</div></div>
+            <div class="cv-hl"><span class="cvhl-rule"></span><div>Building UX community &amp; <strong>mentoring designers</strong></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ── FOOTER ────────────────────────────────────────────── -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <p class="footer-name">Yuanzhen Cai</p>
+      <p class="footer-sub">Senior UX Designer · Laerdal Medical · Norway</p>
+    </div>
+    <p class="footer-year">2025</p>
+  </div>
+  <div class="footer-rule"></div>
+</footer>
+
+<!-- ── LIGHTBOX ──────────────────────────────────────────── -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lb-close" id="lbClose" aria-label="Close">&#x2715;</button>
+  <button class="lb-arrow lb-prev" id="lbPrev" aria-label="Previous">&#x2039;</button>
+  <button class="lb-arrow lb-next" id="lbNext" aria-label="Next">&#x203A;</button>
+  <div class="lb-inner">
+    <img class="lb-img" id="lbImg" src="" alt="">
+  </div>
+  <p class="lb-caption" id="lbCaption"></p>
+  <p class="lb-counter" id="lbCounter"></p>
+</div>
+
+<script src="script-pro.js"></script>
+</body>
+</html>

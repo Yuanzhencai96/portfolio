@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yuanzhen Cai — UX Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400;1,9..144,500&family=Gochi+Hand&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles-sketch.css">
+</head>
+<body>
+
+<!-- Shared SVG defs -->
+<svg style="display:none" aria-hidden="true">
+  <defs>
+    <filter id="sketchy" x="-3%" y="-3%" width="106%" height="106%">
+      <feTurbulence type="turbulence" baseFrequency="0.04" numOctaves="3" seed="9"/>
+      <feDisplacementMap in="SourceGraphic" scale="2.2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+</svg>
+
+<!-- Scroll progress -->
+<div class="scroll-line" id="scrollLine"></div>
+
+<!-- ── NAV ────────────────────────────────────────────────── -->
+<nav class="nav" id="nav">
+  <a href="#hero" class="nav-logo">
+    <span class="logo-text">YC</span>
+    <!-- small hand-drawn underline -->
+    <svg class="logo-stroke" viewBox="0 0 30 5" fill="none"><path d="M1 3 Q8 1 15 3 Q22 5 29 3" stroke="var(--purple)" stroke-width="1.8" stroke-linecap="round"/></svg>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#projects"   class="nl">Work</a></li>
+    <li><a href="#leadership" class="nl">Leadership</a></li>
+    <li><a href="#personal"   class="nl">Personal</a></li>
+    <li><a href="#cv"         class="nl">CV</a></li>
+  </ul>
+  <button class="nav-mob-btn" id="navMobBtn" aria-label="Menu">
+    <span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile overlay -->
+<div class="mob-overlay" id="mobOverlay">
+  <button class="mob-close" id="mobClose" aria-label="Close">✕</button>
+  <ul class="mob-links">
+    <li><a href="#projects"   class="mob-link">Work</a></li>
+    <li><a href="#leadership" class="mob-link">Leadership</a></li>
+    <li><a href="#personal"   class="mob-link">Personal</a></li>
+    <li><a href="#cv"         class="mob-link">CV</a></li>
+  </ul>
+</div>
+
+<main>
+
+<!-- ── HERO ──────────────────────────────────────────────── -->
+<section id="hero" class="hero">
+
+  <!-- Floating doodles -->
+  <div class="hero-doodles" aria-hidden="true">
+    <!-- top-right star -->
+    <svg class="hd hd-star1" viewBox="0 0 44 44" fill="none">
+      <path d="M22 4 L24.5 18 L38 14 L28 24 L38 34 L24 28 L22 42 L20 28 L6 34 L16 24 L6 14 L19.5 18 Z" stroke="var(--purple)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <!-- top-left squiggle -->
+    <svg class="hd hd-squig1" viewBox="0 0 90 20" fill="none">
+      <path d="M2 10 C12 2 22 18 32 10 C42 2 52 18 62 10 C72 2 82 18 88 10" stroke="var(--purple)" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.6"/>
+    </svg>
+    <!-- bottom-right spiral -->
+    <svg class="hd hd-spiral" viewBox="0 0 50 50" fill="none">
+      <path d="M25 25 Q32 17 33 25 Q34 36 23 37 Q10 38 9 24 Q8 9 24 8 Q42 7 43 25 Q44 44 23 45" stroke="var(--purple)" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.5"/>
+    </svg>
+    <!-- small dots -->
+    <svg class="hd hd-dots" viewBox="0 0 50 20" fill="none">
+      <circle cx="5"  cy="10" r="3" fill="var(--purple)" opacity="0.35"/>
+      <circle cx="20" cy="5"  r="2" fill="var(--purple)" opacity="0.25"/>
+      <circle cx="35" cy="14" r="2.5" fill="var(--purple)" opacity="0.3"/>
+      <circle cx="47" cy="7"  r="1.5" fill="var(--purple)" opacity="0.2"/>
+    </svg>
+    <!-- bottom-left scribble -->
+    <svg class="hd hd-scribble" viewBox="0 0 70 40" fill="none">
+      <path d="M5 20 Q15 5 25 20 Q35 35 45 20 Q55 5 65 15" stroke="var(--purple)" stroke-width="1.8" stroke-linecap="round" opacity="0.4"/>
+      <path d="M10 30 Q25 25 40 30" stroke="var(--purple)" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+    </svg>
+    <!-- small circle -->
+    <svg class="hd hd-circle" viewBox="0 0 40 40" fill="none">
+      <path d="M20 5 C32 4 36 10 37 20 C38 30 32 36 20 36 C8 36 3 29 3 20 C3 10 8 4 20 5 Z" stroke="var(--purple)" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.45"/>
+    </svg>
+  </div>
+
+  <div class="container hero-inner">
+
+    <!-- Text content -->
+    <div class="hero-text">
+      <p class="hero-hi">Hello, I'm</p>
+
+      <h1 class="hero-name">
+        <span class="hn-line">Yuanzhen</span>
+        <em  class="hn-line">Cai.</em>
+      </h1>
+
+      <!-- Purple wavy underline — the signature Jackie Zhang element -->
+      <div class="name-underline" aria-hidden="true">
+        <svg viewBox="0 0 600 18" preserveAspectRatio="none" fill="none">
+          <path d="M0 9 C25 3,50 15,75 9 C100 3,125 15,150 9 C175 3,200 15,225 9 C250 3,275 15,300 9 C325 3,350 15,375 9 C400 3,425 15,450 9 C475 3,500 15,525 9 C550 3,575 14,600 9"
+                stroke="var(--purple)" stroke-width="3.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <!-- Chips -->
+      <div class="hero-chips">
+        <span class="chip">🇨🇳 Chinese</span>
+        <span class="chip-dot">·</span>
+        <span class="chip">📍 Norway</span>
+        <span class="chip-dot">·</span>
+        <span class="chip">ESTJ</span>
+        <span class="chip-dot">·</span>
+        <span class="chip">✈ Traveller</span>
+      </div>
+
+      <p class="hero-bio">Senior UX Designer with 5+ years at Laerdal Medical.<br>
+      Design for resuscitation training and healthcare simulation.<br>
+      Aiming for a design leadership role.</p>
+
+      <div class="hero-stats">
+        <div class="hstat"><span class="hstat-n">500K+</span><span class="hstat-l">Users impacted</span></div>
+        <div class="hstat"><span class="hstat-n">5+</span><span class="hstat-l">Years experience</span></div>
+        <div class="hstat"><span class="hstat-n">3</span><span class="hstat-l">Designers led</span></div>
+      </div>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn-sketch magnetic">See my work</a>
+        <a href="#cv"       class="btn-link">CV <svg viewBox="0 0 20 10" width="22" height="11" fill="none"><path d="M1 5 Q8 5 14 5 M11 2 L14 5 L11 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div><!-- /hero-text -->
+
+    <!-- Avatar illustration -->
+    <img src="Avatar2.svg" alt="Illustration of Yuanzhen Cai" class="hero-avatar">
+
+  </div>
+
+  <!-- bottom wavy divider -->
+  <div class="section-wave" aria-hidden="true">
+    <svg viewBox="0 0 1200 40" preserveAspectRatio="none" fill="none">
+      <path d="M0 20 C100 5,200 35,300 20 C400 5,500 35,600 20 C700 5,800 35,900 20 C1000 5,1100 35,1200 20" stroke="var(--purple)" stroke-width="2" stroke-linecap="round" opacity="0.25"/>
+    </svg>
+  </div>
+</section>
+
+
+
+<!-- ── PROJECTS ───────────────────────────────────────────── -->
+<section id="projects" class="projects section-pad">
+  <div class="container">
+    <div class="sec-label-wrap reveal-up">
+      <p class="sec-hand">Work</p>
+      <svg class="sec-wavy" viewBox="0 0 120 12" fill="none">
+        <path d="M0 6 C10 2,20 10,30 6 C40 2,50 10,60 6 C70 2,80 10,90 6 C100 2,110 10,120 6" stroke="var(--purple)" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <h2 class="sec-heading reveal-up">Selected Projects</h2>
+  </div>
+
+  <!-- ── 01 RevivR ── -->
+  <article class="proj-row reveal-up">
+    <div class="proj-visual">
+      <div class="img-frame">
+        <img src="Portfolio%20image/RevivR-1.png" alt="RevivR CPR Training" loading="lazy" class="proj-img lightbox-trigger" data-group="revivr" data-caption="RevivR — Overview">
+        <svg class="img-sketch-border" viewBox="0 0 100 67" preserveAspectRatio="none" fill="none">
+          <path d="M3 3 C35 1.5 65 1.5 97 3 C98.5 25 98.5 42 97 64 C65 65.5 35 65.5 3 64 C1.5 42 1.5 25 3 3 Z" stroke="var(--purple)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="proj-sub-imgs">
+        <div class="img-frame img-frame-sm">
+          <img src="Portfolio%20image/RevivR-2.png" alt="RevivR Interface" loading="lazy" class="proj-img lightbox-trigger" data-group="revivr" data-caption="RevivR — Interface">
+          <svg class="img-sketch-border" viewBox="0 0 100 67" preserveAspectRatio="none" fill="none">
+            <path d="M3 3 C35 1.5 65 1.5 97 3 C98.5 25 98.5 42 97 64 C65 65.5 35 65.5 3 64 C1.5 42 1.5 25 3 3 Z" stroke="var(--purple)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="img-frame img-frame-sm">
+          <img src="Portfolio%20image/RevivR-3.png" alt="RevivR Research" loading="lazy" class="proj-img lightbox-trigger" data-group="revivr" data-caption="RevivR — Research">
+          <svg class="img-sketch-border" viewBox="0 0 100 67" preserveAspectRatio="none" fill="none">
+            <path d="M3 3 C35 1.5 65 1.5 97 3 C98.5 25 98.5 42 97 64 C65 65.5 35 65.5 3 64 C1.5 42 1.5 25 3 3 Z" stroke="var(--purple)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="proj-info">
+      <span class="proj-num-hand">01</span>
+      <h3 class="proj-title">RevivR CPR Training Ecosystem</h3>
+      <svg class="proj-title-wave" viewBox="0 0 220 10" fill="none" preserveAspectRatio="none">
+        <path d="M0 5 C18 1,36 9,54 5 C72 1,90 9,108 5 C126 1,144 9,162 5 C180 1,198 9,220 5" stroke="var(--purple)" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <div class="proj-tags">
+        <span>Lead UX Designer</span><span>3 Years</span><span>Global Product</span>
+      </div>
+      <p class="proj-desc">Led end-to-end experience design for the RevivR CPR training ecosystem — a global digital product deployed across five countries, impacting over 500,000 users. Translated complex medical training requirements into accessible, engaging, behaviour-driven user experiences.</p>
+      <p class="proj-desc">Collaborated with BHF, AHA, and the Swedish Resuscitation Council across Solo, Group, and Classroom formats. Three years of user testing, stakeholder management, and data-driven decisions.</p>
+      <div class="proj-kpis">
+        <div class="kpi"><span class="kpi-n">500K+</span><span class="kpi-l">Users</span></div>
+        <div class="kpi"><span class="kpi-n">5</span><span class="kpi-l">Countries</span></div>
+        <div class="kpi"><span class="kpi-n">5</span><span class="kpi-l">Partners</span></div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 02 Heartsaver (reversed) ── -->
+  <article class="proj-row proj-row-rev reveal-up">
+    <div class="proj-visual">
+      <div class="img-frame">
+        <img src="Portfolio%20image/Heartsaver-1.png" alt="Heartsaver Direct" loading="lazy" class="proj-img lightbox-trigger" data-group="heartsaver" data-caption="Heartsaver — Onboarding">
+        <svg class="img-sketch-border" viewBox="0 0 100 67" preserveAspectRatio="none" fill="none">
+          <path d="M3 3 C35 1.5 65 1.5 97 3 C98.5 25 98.5 42 97 64 C65 65.5 35 65.5 3 64 C1.5 42 1.5 25 3 3 Z" stroke="var(--purple)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="proj-sub-imgs">
+        <div class="img-frame img-frame-sm">
+          <img src="Portfolio%20image/Heartsaver-2.png" alt="Heartsaver Support" loading="lazy" class="proj-img lightbox-trigger" data-group="heartsaver" data-caption="Heartsaver — Support UX">
+          <svg class="img-sketch-border" viewBox="0 0 100 67" preserveAspectRatio="none" fill="none">
+            <path d="M3 3 C35 1.5 65 1.5 97 3 C98.5 25 98.5 42 97 64 C65 65.5 35 65.5 3 64 C1.5 42 1.5 25 3 3 Z" stroke="var(--purple)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="proj-info">
+      <span class="proj-num-hand">02</span>
+      <h3 class="proj-title">Heartsaver Direct</h3>
+      <svg class="proj-title-wave" viewBox="0 0 160 10" fill="none" preserveAspectRatio="none">
+        <path d="M0 5 C13 1,27 9,40 5 C53 1,67 9,80 5 C93 1,107 9,120 5 C133 1,147 9,160 5" stroke="var(--purple)" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <div class="proj-tags">
+        <span>UX Designer</span><span>1 Year</span><span>Product Improvement</span>
+      </div>
+      <p class="proj-desc">Heartsaver Direct builds safer workplaces by training employees to respond confidently to first aid emergencies — pairing simulation technology with best-in-class eLearning and proven hands-on methods to bring flexibility and convenience to workplace CPR &amp; first aid training.</p>
+      <p class="proj-desc">Managed risk mitigation in customer onboarding and troubleshooting within the customer discovery programme, consistently increasing customer satisfaction. One year of focused user testing and iterative product improvement — redesigning onboarding and support flows to reduce friction and build customer confidence.</p>
+      <div class="proj-kpis">
+        <div class="kpi"><span class="kpi-n">↓</span><span class="kpi-l">Risk</span></div>
+        <div class="kpi"><span class="kpi-n">↑</span><span class="kpi-l">Satisfaction</span></div>
+        <div class="kpi"><span class="kpi-n">1yr</span><span class="kpi-l">Project</span></div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 03 SimGo ── -->
+  <article class="proj-row reveal-up">
+    <div class="proj-visual">
+      <div class="img-frame">
+        <img src="Portfolio%20image/SimGo-1.jpg" alt="SimGo Mobile Controller" loading="lazy" class="proj-img lightbox-trigger" data-group="simgo" data-caption="SimGo — Interface">
+        <svg class="img-sketch-border" viewBox="0 0 100 67" preserveAspectRatio="none" fill="none">
+          <path d="M3 3 C35 1.5 65 1.5 97 3 C98.5 25 98.5 42 97 64 C65 65.5 35 65.5 3 64 C1.5 42 1.5 25 3 3 Z" stroke="var(--purple)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="proj-sub-imgs">
+        <div class="img-frame img-frame-sm">
+          <img src="Portfolio%20image/SimGo-2.png" alt="SimGo Design System" loading="lazy" class="proj-img lightbox-trigger" data-group="simgo" data-caption="SimGo — Design System">
+          <svg class="img-sketch-border" viewBox="0 0 100 67" preserveAspectRatio="none" fill="none">
+            <path d="M3 3 C35 1.5 65 1.5 97 3 C98.5 25 98.5 42 97 64 C65 65.5 35 65.5 3 64 C1.5 42 1.5 25 3 3 Z" stroke="var(--purple)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="img-frame img-frame-sm">
+          <img src="Portfolio%20image/SimGo-3.png" alt="SimGo Vision" loading="lazy" class="proj-img lightbox-trigger" data-group="simgo" data-caption="SimGo — Vision">
+          <svg class="img-sketch-border" viewBox="0 0 100 67" preserveAspectRatio="none" fill="none">
+            <path d="M3 3 C35 1.5 65 1.5 97 3 C98.5 25 98.5 42 97 64 C65 65.5 35 65.5 3 64 C1.5 42 1.5 25 3 3 Z" stroke="var(--purple)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="proj-info">
+      <span class="proj-num-hand">03</span>
+      <h3 class="proj-title">SimGo Mobile Simulator Controller</h3>
+      <svg class="proj-title-wave" viewBox="0 0 280 10" fill="none" preserveAspectRatio="none">
+        <path d="M0 5 C23 1,46 9,70 5 C93 1,116 9,140 5 C163 1,186 9,210 5 C233 1,256 9,280 5" stroke="var(--purple)" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <div class="proj-tags">
+        <span>Design Lead</span><span>~1 Year</span><span>Mobile</span><span>Design System</span>
+      </div>
+      <p class="proj-desc">SimGo is a simpler, more accessible handheld device enabling educators and students to design, set up, control, and debrief simulation sessions — targeting U.S. nursing faculty in low-budget teaching facilities and addressing faculty shortages through ecosystem thinking.</p>
+      <p class="proj-desc">Design lead for 6 months on the mobile simulator controller. Led the team through two critical milestones — IMSH conference launch and the June release. Introduced a clearer design vision through visual storytelling to align stakeholders, and built a comprehensive design system from scratch for long-term scalability.</p>
+      <div class="proj-kpis">
+        <div class="kpi"><span class="kpi-n">IMSH</span><span class="kpi-l">Launch</span></div>
+        <div class="kpi"><span class="kpi-n">✓</span><span class="kpi-l">Design System</span></div>
+        <div class="kpi"><span class="kpi-n">6mo</span><span class="kpi-l">Lead</span></div>
+      </div>
+    </div>
+  </article>
+
+</section><!-- /projects -->
+
+
+<!-- ── LEADERSHIP ────────────────────────────────────────── -->
+<section id="leadership" class="leadership section-pad">
+  <div class="container">
+    <div class="sec-label-wrap reveal-up">
+      <p class="sec-hand">Growth</p>
+      <svg class="sec-wavy" viewBox="0 0 130 12" fill="none">
+        <path d="M0 6 C11 2,22 10,33 6 C44 2,55 10,66 6 C77 2,88 10,99 6 C110 2,121 10,130 6" stroke="var(--purple)" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <h2 class="sec-heading reveal-up">Leadership &amp; Impact</h2>
+
+    <div class="ld-grid">
+
+      <!-- MBA -->
+      <div class="ld-card reveal-up">
+        <!-- sketchy number -->
+        <div class="ld-num-wrap">
+          <span class="ld-num">01</span>
+          <svg class="ld-num-circle" viewBox="0 0 60 60" fill="none">
+            <path d="M30 5 C48 4 56 12 57 30 C58 48 48 56 30 56 C12 56 3 47 3 30 C3 13 12 4 30 5 Z" stroke="var(--purple)" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="ld-body">
+          <span class="ld-year">2025 — 2026</span>
+          <h3 class="ld-title">MBA · Imperial College London</h3>
+          <p class="ld-desc">Deepening strategic and leadership capabilities at one of the world's leading business schools — focused on aligning design with broader business objectives.</p>
+          <div class="ld-tags">
+            <span>Strategy</span><span>Leadership</span><span>Org Behaviour</span>
+            <span>Entrepreneurship</span><span>Sales Psychology</span><span>Corporate Finance</span>
+            <span>Accounting</span><span>Managerial Economics</span><span>Marketing</span>
+          </div>
+          <div class="ld-callout">
+            <svg viewBox="0 0 16 16" width="14" height="14" fill="none"><path d="M8 1 L9 6.5 L14.5 8 L9 9.5 L8 15 L7 9.5 L1.5 8 L7 6.5 Z" stroke="var(--purple)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Kenya field experience — "How Business Addresses Inequality"
+          </div>
+          <div class="ld-imgs">
+            <div class="img-frame"><img src="Portfolio%20image/MBA-1.png" alt="MBA" loading="lazy" class="lightbox-trigger" data-group="mba" data-caption="MBA — Imperial College London">
+              <svg class="img-sketch-border" viewBox="0 0 100 67" preserveAspectRatio="none" fill="none"><path d="M3 3 C35 1.5 65 1.5 97 3 C98.5 25 98.5 42 97 64 C65 65.5 35 65.5 3 64 C1.5 42 1.5 25 3 3 Z" stroke="var(--purple)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="img-frame"><img src="Portfolio%20image/MBA-2.png" alt="Kenya" loading="lazy" class="lightbox-trigger" data-group="mba" data-caption="MBA — Kenya Field Experience">
+              <svg class="img-sketch-border" viewBox="0 0 100 67" preserveAspectRatio="none" fill="none"><path d="M3 3 C35 1.5 65 1.5 97 3 C98.5 25 98.5 42 97 64 C65 65.5 35 65.5 3 64 C1.5 42 1.5 25 3 3 Z" stroke="var(--purple)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- UX Community -->
+      <div class="ld-card reveal-up">
+        <div class="ld-num-wrap">
+          <span class="ld-num">02</span>
+          <svg class="ld-num-circle" viewBox="0 0 60 60" fill="none">
+            <path d="M30 5 C48 4 56 12 57 30 C58 48 48 56 30 56 C12 56 3 47 3 30 C3 13 12 4 30 5 Z" stroke="var(--purple)" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="ld-body">
+          <span class="ld-year">Ongoing</span>
+          <h3 class="ld-title">Building the UX Community</h3>
+          <p class="ld-desc">Creating the infrastructure for a thriving UX practice at Laerdal — frameworks, culture, and resources that empower designers to grow and do their best work.</p>
+          <div class="ld-tags">
+            <span>Competence Framework</span><span>Development Framework</span>
+            <span>Culture Workshop</span><span>Culture Website</span>
+          </div>
+          <div class="ld-imgs">
+            <div class="img-frame"><img src="Portfolio%20image/UX-1.png" alt="UX Community" loading="lazy" class="lightbox-trigger" data-group="ux" data-caption="UX Community Building">
+              <svg class="img-sketch-border" viewBox="0 0 100 67" preserveAspectRatio="none" fill="none"><path d="M3 3 C35 1.5 65 1.5 97 3 C98.5 25 98.5 42 97 64 C65 65.5 35 65.5 3 64 C1.5 42 1.5 25 3 3 Z" stroke="var(--purple)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="img-frame"><img src="Portfolio%20image/UX-2.png" alt="UX Frameworks" loading="lazy" class="lightbox-trigger" data-group="ux" data-caption="UX Frameworks &amp; Culture">
+              <svg class="img-sketch-border" viewBox="0 0 100 67" preserveAspectRatio="none" fill="none"><path d="M3 3 C35 1.5 65 1.5 97 3 C98.5 25 98.5 42 97 64 C65 65.5 35 65.5 3 64 C1.5 42 1.5 25 3 3 Z" stroke="var(--purple)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mentorship -->
+      <div class="ld-card reveal-up">
+        <div class="ld-num-wrap">
+          <span class="ld-num">03</span>
+          <svg class="ld-num-circle" viewBox="0 0 60 60" fill="none">
+            <path d="M30 5 C48 4 56 12 57 30 C58 48 48 56 30 56 C12 56 3 47 3 30 C3 13 12 4 30 5 Z" stroke="var(--purple)" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="ld-body">
+          <span class="ld-year">Ongoing</span>
+          <h3 class="ld-title">Mentorship &amp; Teaching</h3>
+          <p class="ld-desc">Investing in the next generation of designers through hands-on mentorship, student thesis support, and guest lectures at universities. Mentored <strong>5 interns</strong> and supported <strong>2 master's theses</strong>.</p>
+          <div class="ld-tags">
+            <span>Intern Mentoring</span><span>Student Thesis</span><span>Guest Lectures</span>
+          </div>
+          <div class="ld-imgs">
+            <div class="img-frame"><img src="Portfolio%20image/Mentor-1.jpg" alt="Mentorship" loading="lazy" class="lightbox-trigger" data-group="mentor" data-caption="Mentorship Sessions">
+              <svg class="img-sketch-border" viewBox="0 0 100 67" preserveAspectRatio="none" fill="none"><path d="M3 3 C35 1.5 65 1.5 97 3 C98.5 25 98.5 42 97 64 C65 65.5 35 65.5 3 64 C1.5 42 1.5 25 3 3 Z" stroke="var(--purple)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="img-frame"><img src="Portfolio%20image/Mentor-2.png" alt="Teaching" loading="lazy" class="lightbox-trigger" data-group="mentor" data-caption="Guest Lectures">
+              <svg class="img-sketch-border" viewBox="0 0 100 67" preserveAspectRatio="none" fill="none"><path d="M3 3 C35 1.5 65 1.5 97 3 C98.5 25 98.5 42 97 64 C65 65.5 35 65.5 3 64 C1.5 42 1.5 25 3 3 Z" stroke="var(--purple)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ── PERSONAL ──────────────────────────────────────────── -->
+<section id="personal" class="personal section-pad">
+  <div class="container">
+    <div class="sec-label-wrap reveal-up">
+      <p class="sec-hand">Life beyond design</p>
+      <svg class="sec-wavy" viewBox="0 0 200 12" fill="none">
+        <path d="M0 6 C17 2,33 10,50 6 C67 2,83 10,100 6 C117 2,133 10,150 6 C167 2,183 10,200 6" stroke="var(--purple)" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <h2 class="sec-heading reveal-up">Personal</h2>
+    <p class="personal-intro reveal-up">Mandarin Chinese teacher. Passionate traveller. The curiosity I bring to the world shapes every design decision.</p>
+  </div>
+
+  <div class="gallery-wrap reveal-up">
+    <button class="gal-arrow gal-prev" id="galPrev" aria-label="Previous">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none"><path d="M15 19 L8 12 L15 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+
+    <div class="gallery-track" id="galleryTrack">
+      <div class="gal-cell">
+        <div class="img-frame">
+          <img src="Portfolio%20image/Personal-1.jpg" alt="Travels" loading="lazy" class="gal-img lightbox-trigger" data-group="personal" data-caption="Travels">
+          <svg class="img-sketch-border" viewBox="0 0 100 67" preserveAspectRatio="none" fill="none"><path d="M3 3 C35 1.5 65 1.5 97 3 C98.5 25 98.5 42 97 64 C65 65.5 35 65.5 3 64 C1.5 42 1.5 25 3 3 Z" stroke="var(--purple)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="gal-cap">click to see</div>
+        </div>
+      </div>
+      <div class="gal-cell">
+        <div class="img-frame">
+          <img src="Portfolio%20image/Personal-2.jpg" alt="Kenya" loading="lazy" class="gal-img lightbox-trigger" data-group="personal" data-caption="Kenya, MBA Fieldwork">
+          <svg class="img-sketch-border" viewBox="0 0 100 67" preserveAspectRatio="none" fill="none"><path d="M3 3 C35 1.5 65 1.5 97 3 C98.5 25 98.5 42 97 64 C65 65.5 35 65.5 3 64 C1.5 42 1.5 25 3 3 Z" stroke="var(--purple)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="gal-cap">click to see</div>
+        </div>
+      </div>
+      <div class="gal-cell">
+        <div class="img-frame">
+          <img src="Portfolio%20image/Personal-3.jpg" alt="Norway" loading="lazy" class="gal-img lightbox-trigger" data-group="personal" data-caption="Norway Life">
+          <svg class="img-sketch-border" viewBox="0 0 100 67" preserveAspectRatio="none" fill="none"><path d="M3 3 C35 1.5 65 1.5 97 3 C98.5 25 98.5 42 97 64 C65 65.5 35 65.5 3 64 C1.5 42 1.5 25 3 3 Z" stroke="var(--purple)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="gal-cap">click to see</div>
+        </div>
+      </div>
+      <div class="gal-cell">
+        <div class="img-frame">
+          <img src="Portfolio%20image/Personal-4.jpg" alt="Adventures" loading="lazy" class="gal-img lightbox-trigger" data-group="personal" data-caption="Adventures">
+          <svg class="img-sketch-border" viewBox="0 0 100 67" preserveAspectRatio="none" fill="none"><path d="M3 3 C35 1.5 65 1.5 97 3 C98.5 25 98.5 42 97 64 C65 65.5 35 65.5 3 64 C1.5 42 1.5 25 3 3 Z" stroke="var(--purple)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="gal-cap">click to see</div>
+        </div>
+      </div>
+      <div class="gal-cell">
+        <div class="img-frame">
+          <img src="Portfolio%20image/Personal-5.jpg" alt="Culture" loading="lazy" class="gal-img lightbox-trigger" data-group="personal" data-caption="Food &amp; Culture">
+          <svg class="img-sketch-border" viewBox="0 0 100 67" preserveAspectRatio="none" fill="none"><path d="M3 3 C35 1.5 65 1.5 97 3 C98.5 25 98.5 42 97 64 C65 65.5 35 65.5 3 64 C1.5 42 1.5 25 3 3 Z" stroke="var(--purple)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="gal-cap">click to see</div>
+        </div>
+      </div>
+      <div class="gal-cell">
+        <div class="img-frame">
+          <img src="Portfolio%20image/Personal-6.jpg" alt="Moments" loading="lazy" class="gal-img lightbox-trigger" data-group="personal" data-caption="Moments">
+          <svg class="img-sketch-border" viewBox="0 0 100 67" preserveAspectRatio="none" fill="none"><path d="M3 3 C35 1.5 65 1.5 97 3 C98.5 25 98.5 42 97 64 C65 65.5 35 65.5 3 64 C1.5 42 1.5 25 3 3 Z" stroke="var(--purple)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="gal-cap">click to see</div>
+        </div>
+      </div>
+    </div><!-- /gallery-track -->
+
+    <button class="gal-arrow gal-next" id="galNext" aria-label="Next">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none"><path d="M9 5 L16 12 L9 19" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+</section>
+
+
+<!-- ── CV ────────────────────────────────────────────────── -->
+<section id="cv" class="cv-sec section-pad">
+  <div class="container">
+    <div class="sec-label-wrap reveal-up">
+      <p class="sec-hand">Resume</p>
+      <svg class="sec-wavy" viewBox="0 0 90 12" fill="none">
+        <path d="M0 6 C8 2,15 10,23 6 C30 2,38 10,45 6 C53 2,60 10,68 6 C75 2,83 10,90 6" stroke="var(--purple)" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <h2 class="sec-heading reveal-up">Curriculum Vitae</h2>
+
+    <div class="cv-card reveal-up">
+      <!-- sketch corner decoration -->
+      <svg class="cv-corner-doodle" viewBox="0 0 60 60" fill="none" aria-hidden="true">
+        <path d="M55 5 C40 3 15 10 5 30 C2 45 8 55 20 57" stroke="var(--purple)" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+        <circle cx="52" cy="8" r="3" stroke="var(--purple)" stroke-width="1.5" fill="none" opacity="0.3"/>
+      </svg>
+
+      <div class="cv-header">
+        <div>
+          <h3 class="cv-name">Yuanzhen Cai</h3>
+          <svg class="cv-name-wave" viewBox="0 0 240 12" fill="none">
+            <path d="M0 6 C20 2,40 10,60 6 C80 2,100 10,120 6 C140 2,160 10,180 6 C200 2,220 10,240 6" stroke="var(--purple)" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <p class="cv-role">Senior UX Designer · Healthcare &amp; Simulation</p>
+        </div>
+        <span class="cv-loc">Stavanger, Norway</span>
+      </div>
+
+      <div class="cv-body">
+        <div class="cv-col">
+          <h4 class="cv-col-label">Experience</h4>
+          <div class="cv-entry">
+            <span class="cv-date">2021 — Present</span>
+            <div>
+              <div class="cv-role-title">Senior UX Designer</div>
+              <div class="cv-place">Laerdal Medical · Stavanger, Norway</div>
+              <ul class="cv-bullets">
+                <li>Leading a team of 3 designers in a simulation product</li>
+                <li>End-to-end UX for CPR training, simulation, and clinical apps</li>
+                <li>International collaborations: BHF, AHA, Swedish RC</li>
+                <li>Building design frameworks &amp; enabling the UX community</li>
+              </ul>
+            </div>
+          </div>
+
+          <h4 class="cv-col-label">Skills</h4>
+          <div class="cv-skill-tags">
+            <span>UX Research</span><span>Interaction Design</span><span>Design Systems</span>
+            <span>Figma</span><span>User Testing</span><span>Stakeholder Management</span>
+            <span>Team Leadership</span><span>Service Design</span><span>Design with AI</span>
+            <span>Data Analysis</span><span>Miro</span><span>Prototyping</span>
+          </div>
+
+          <h4 class="cv-col-label">Languages</h4>
+          <div class="cv-langs">
+            <div class="cv-lang"><span>Mandarin Chinese</span><span class="cv-lang-lv">Native</span></div>
+            <div class="cv-lang"><span>English</span><span class="cv-lang-lv">Fluent</span></div>
+            <div class="cv-lang"><span>Norwegian</span><span class="cv-lang-lv">Learning</span></div>
+          </div>
+        </div>
+
+        <div class="cv-col cv-col-r">
+          <h4 class="cv-col-label">Education</h4>
+          <div class="cv-entry">
+            <span class="cv-date">2025 — 2026</span>
+            <div>
+              <div class="cv-role-title">MBA</div>
+              <div class="cv-place">Imperial College London · UK</div>
+              <p class="cv-note">Strategy, Leadership, Entrepreneurship, Finance, Marketing. Kenya field experience.</p>
+            </div>
+          </div>
+          <div class="cv-entry">
+            <span class="cv-date">2018 — 2020</span>
+            <div>
+              <div class="cv-role-title">MSc, Product Service System Design</div>
+              <div class="cv-place">Politecnico di Milano · Italy</div>
+            </div>
+          </div>
+          <div class="cv-entry">
+            <span class="cv-date">2014 — 2018</span>
+            <div>
+              <div class="cv-role-title">BEng, Industrial Design</div>
+              <div class="cv-place">Hefei University of Technology · China</div>
+            </div>
+          </div>
+
+          <h4 class="cv-col-label">Highlights</h4>
+          <div class="cv-highlights">
+            <div class="cv-hl"><span class="cvhl-dot"></span><span><strong>500K+ users</strong> across 5 countries</span></div>
+            <div class="cv-hl"><span class="cvhl-dot"></span><span>Leading a <strong>team of 3 designers</strong></span></div>
+            <div class="cv-hl"><span class="cvhl-dot"></span><span>MBA at <strong>Imperial College London</strong></span></div>
+            <div class="cv-hl"><span class="cvhl-dot"></span><span><strong>5+ years</strong> in healthcare UX &amp; simulation</span></div>
+            <div class="cv-hl"><span class="cvhl-dot"></span><span>Building UX community &amp; <strong>mentoring designers</strong></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ── FOOTER ────────────────────────────────────────────── -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <p class="footer-name">Yuanzhen Cai</p>
+      <svg class="footer-wave" viewBox="0 0 130 8" fill="none">
+        <path d="M0 4 C11 1,22 7,33 4 C44 1,55 7,66 4 C77 1,88 7,99 4 C110 1,121 7,130 4" stroke="var(--purple)" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <p class="footer-sub">Senior UX Designer · Laerdal Medical · Norway · 2025</p>
+  </div>
+</footer>
+
+<!-- ── LIGHTBOX ──────────────────────────────────────────── -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lb-close" id="lbClose" aria-label="Close">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M5 5 L19 19 M19 5 L5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+  </button>
+  <button class="lb-arrow lb-prev" id="lbPrev" aria-label="Previous">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="none"><path d="M15 19 L8 12 L15 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <button class="lb-arrow lb-next" id="lbNext" aria-label="Next">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="none"><path d="M9 5 L16 12 L9 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <div class="lb-content">
+    <img class="lb-img" id="lbImg" src="" alt="">
+    <div class="lb-footer">
+      <p class="lb-caption" id="lbCaption"></p>
+      <p class="lb-counter" id="lbCounter"></p>
+    </div>
+  </div>
+</div>
+
+<script src="script-sketch.js"></script>
+</body>
+</html>
